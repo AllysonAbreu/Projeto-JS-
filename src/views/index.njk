@@ -1,0 +1,16 @@
+{%extends "layout.njk"%}}
+
+{%block conteudo%}
+  <div id="wrapper">
+    <img src="{{dados.avatar_url}}" alt='Allyson Abreu'>
+    <h1>{{dados.name}}</h1>
+    <h2>{{dados.profession}}</h2>
+    <p>{{dados.description}}</p>
+  </div>
+
+  <div id="links-footer" class="links">
+    {% for link in dados.links%}
+    <a href="{{link.url}}" target="_blank">{{link.name}}</a>    
+    {%endfor%}
+  </div>
+{% endblock%}
